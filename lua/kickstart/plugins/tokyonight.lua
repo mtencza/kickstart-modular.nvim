@@ -13,7 +13,22 @@ return {
       vim.cmd.colorscheme 'tokyonight-night'
 
       -- You can configure highlights by doing something like:
-      vim.cmd.hi 'Comment gui=none'
+      -- vim.cmd.hi 'Comment gui=none'
+
+      -- Make the status line and command line transparent
+      vim.cmd [[
+        hi StatusLine guibg=NONE ctermbg=NONE
+        hi StatusLineNC guibg=NONE ctermbg=NONE
+        hi WinBar guibg=NONE ctermbg=NONE
+        hi WinSeparator guibg=NONE guifg=NONE ctermbg=NONE ctermfg=NONE
+      ]]
+
+      vim.cmd [[
+        hi Normal guibg=NONE ctermbg=NONE
+        hi NormalNC guibg=NONE ctermbg=NONE
+        hi NeoTreeNormal guibg=NONE ctermbg=NONE
+        hi NeoTreeNormalNC guibg=NONE ctermbg=NONE
+      ]]
     end,
   },
 }
