@@ -108,6 +108,23 @@ return {
       vim.keymap.set('n', '<leader>sn', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = '[S]earch [N]eovim files' })
+
+      -- Add a new keymap for searching hidden and unhidden files
+      vim.keymap.set('n', '<leader>si', function()
+        builtin.live_grep {
+          vimgrep_arguments = {
+            'rg',
+            '--color=never',
+            '--no-heading',
+            '--with-filename',
+            '--line-number',
+            '--column',
+            '--smart-case',
+            '--hidden', -- Include hidden files
+          },
+          prompt_title = 'Live Grep (Include Hidden Files)',
+        }
+      end, { desc = '[S]earch [I]nclude Hidden Files' })
     end,
   },
 }
