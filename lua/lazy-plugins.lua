@@ -37,6 +37,10 @@ require('lazy').setup({
 
   require 'kickstart/plugins/tokyonight',
 
+  require 'kickstart/plugins/artic',
+
+  require 'kickstart/plugins/vscode',
+
   require 'kickstart/plugins/todo-comments',
 
   require 'kickstart/plugins/mini',
