@@ -93,7 +93,13 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 -- vim.g.have_nerd_font = false
 vim.g.have_nerd_font = true
+-- testing to fix cursor
+-- vim.opt.guicursor = 'n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor,r-cr:hor20-Cursor,o:hor50-Cursor'
 
+vim.opt.guicursor =
+  'n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait900-blinkoff100-blinkon100-Cursor/lCursor,sm:block-blinkwait75-blinkoff50-blinkon75'
+
+vim.opt.termguicolors = true
 --
 -- [[ Setting options ]]
 require 'options'
