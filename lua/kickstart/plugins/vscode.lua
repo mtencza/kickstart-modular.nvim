@@ -9,7 +9,7 @@ return {
         style = 'dark',
 
         -- Enable transparent background
-        transparent = false,
+        transparent = true,
 
         -- Enable italic comment
         italic_comments = true,
@@ -25,32 +25,62 @@ return {
       }
 
       -- Ensure colorscheme is applied after setup
-      vim.cmd.colorscheme 'vscode'
+      -- vim.cmd.colorscheme 'vscode'
     end,
   },
   {
     'HiPhish/rainbow-delimiters.nvim',
     config = function()
       local rainbow_delimiters = require 'rainbow-delimiters'
+      -- vs code
+      --
+      -- local function setup_rainbow_delimiters()
+      --   -- Define the colors you want to use
+      --   local colors = {
+      --     '#C586C0', -- vscPink
+      --     '#18a2fe', -- vscMediumBlue
+      --     '#D7BA7D', -- vscYellowOrange
+      --     '#C586C0', -- vscPink
+      --     '#18a2fe', -- vscMediumBlue
+      --     '#D7BA7D', -- vscYellowOrange
+      --     '#C586C0', -- vscPink
+      --     '#18a2fe', -- vscMediumBlue
+      --   }
+      --
+      --   vim.api.nvim_set_hl(0, 'RainbowDelimiter0', { fg = '#D7BA7D' })
+      --   -- Create highlight groups
+      --   for i, color in ipairs(colors) do
+      --     vim.api.nvim_set_hl(0, 'RainbowDelimiter' .. i, { fg = color })
+      --   end
+      --
+      --   vim.g.rainbow_delimiters = {
+      --     strategy = {
+      --       [''] = rainbow_delimiters.strategy['global'],
+      --       vim = rainbow_delimiters.strategy['local'],
+      --     },
+      --     query = {
+      --       [''] = 'rainbow-delimiters',
+      --       tsx = 'rainbow-parens',
+      --       lua = 'rainbow-blocks',
+      --     },
+      --     -- highlight = vim.tbl_map(function(i)
+      --     --   return 'RainbowDelimiter' .. i
+      --     -- end, vim.fn.range(#colors)),
+      --     highlight = {
+      --       'RainbowDelimiter0',
+      --       'RainbowDelimiter1',
+      --       'RainbowDelimiter2',
+      --     },
+      --   }
+      -- end
 
       local function setup_rainbow_delimiters()
-        -- Define the colors you want to use
-        local colors = {
-          '#C586C0', -- vscPink
-          '#18a2fe', -- vscMediumBlue
-          '#D7BA7D', -- vscYellowOrange
-          '#C586C0', -- vscPink
-          '#18a2fe', -- vscMediumBlue
-          '#D7BA7D', -- vscYellowOrange
-          '#C586C0', -- vscPink
-          '#18a2fe', -- vscMediumBlue
-        }
-
-        vim.api.nvim_set_hl(0, 'RainbowDelimiter0', { fg = '#D7BA7D' })
-        -- Create highlight groups
-        for i, color in ipairs(colors) do
-          vim.api.nvim_set_hl(0, 'RainbowDelimiter' .. i, { fg = color })
-        end
+        -- -- Define the colors you want to use
+        -- vim.api.nvim_set_hl(0, 'RainbowDelimiter0', { fg = '#D7BA7D' })
+        -- -- Create highlight groups
+        -- for i, color in ipairs(colors) do
+        --   vim.api.nvim_set_hl(0, 'RainbowDelimiter' .. i, { fg = color })
+        -- end
 
         vim.g.rainbow_delimiters = {
           strategy = {
@@ -66,15 +96,19 @@ return {
           --   return 'RainbowDelimiter' .. i
           -- end, vim.fn.range(#colors)),
           highlight = {
-            'RainbowDelimiter0',
-            'RainbowDelimiter1',
-            'RainbowDelimiter2',
+            'RainbowDelimiterRed',
+            'RainbowDelimiterYellow',
+            'RainbowDelimiterBlue',
+            'RainbowDelimiterOrange',
+            'RainbowDelimiterGreen',
+            'RainbowDelimiterViolet',
+            'RainbowDelimiterCyan',
           },
         }
       end
 
       -- Initial Setup
-      setup_rainbow_delimiters()
+      -- setup_rainbow_delimiters()
 
       -- Reapply plugin when scheme changes
       vim.api.nvim_create_autocmd('ColorScheme', {

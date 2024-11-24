@@ -100,6 +100,7 @@ vim.opt.guicursor =
   'n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait900-blinkoff100-blinkon100-Cursor/lCursor,sm:block-blinkwait75-blinkoff50-blinkon75'
 
 vim.opt.termguicolors = true
+-- vim.opt.termguicolors = false
 --
 -- [[ Setting options ]]
 require 'options'
@@ -113,5 +114,22 @@ require 'lazy-bootstrap'
 -- [[ Configure and install plugins ]]
 require 'lazy-plugins'
 
+vim.cmd.colorscheme 'catppuccin-macchiato'
+
+-- set for transparent background on nvim
+--
+-- vim.cmd [[
+--     hi StatusLine guibg=NONE ctermbg=NONE
+--     hi StatusLineNC guibg=NONE ctermbg=NONE
+--     hi WinBar guibg=NONE ctermbg=NONE
+--     hi WinSeparator guibg=NONE guifg=NONE ctermbg=NONE ctermfg=NONE
+--       ]]
+--
+-- vim.cmd [[
+--     hi Normal guibg=NONE ctermbg=NONE
+--     hi NormalNC guibg=NONE ctermbg=NONE
+--     hi NeoTreeNormal guibg=NONE ctermbg=NONE
+--     hi NeoTreeNormalNC guibg=NONE ctermbg=NONE
+--       ]]
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

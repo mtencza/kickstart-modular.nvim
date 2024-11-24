@@ -44,6 +44,9 @@ end, { desc = 'Deletes all buffers except current', noremap = true, silent = tru
 -- Project view vim style
 vim.keymap.set('n', '<leader>pv', ':Ex<CR>', { desc = 'Project Viewer' })
 
+-- Print cur directory
+vim.keymap.set('n', '<leader>pd', ':echo expand("%")<CR>', { desc = 'Current [D]irectory' })
+
 -- Move highlighted area around
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'K', ":m '>-2<CR>gv=gv")

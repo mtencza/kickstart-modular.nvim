@@ -35,11 +35,16 @@ require('lazy').setup({
 
   require 'kickstart/plugins/cmp',
 
+  -- Custom colorschemes
   require 'kickstart/plugins/tokyonight',
 
   require 'kickstart/plugins/artic',
 
   require 'kickstart/plugins/vscode',
+
+  require 'kickstart/plugins/catpuccin',
+
+  ---
 
   require 'kickstart/plugins/todo-comments',
 
@@ -60,6 +65,8 @@ require('lazy').setup({
   require 'kickstart/plugins/lazygit',
 
   require 'kickstart/plugins/wezterm-types',
+
+  require 'kickstart/plugins/diffview',
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
