@@ -31,6 +31,7 @@ return {
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
         { '<leader>b', group = '[B]uffer' },
         { '<leader>p', group = '[P]roject' },
+        { '<leader>g', group = '[G]it' },
       }
     end,
   },

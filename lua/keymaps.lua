@@ -62,6 +62,8 @@ vim.keymap.set('n', 'N', 'Nzzzv')
 -- Change cur file to executable
 vim.keymap.set('n', '<leader>x', ':!chmod +x %<CR>', { desc = 'Make E[X]ecutable' })
 
+vim.keymap.set('n', '<leader>gb', ':Telescope git_branches<CR>', { desc = '[G]it [B]ranches' })
+
 -- When highlighting->paste, shoot highlighted into void register and preserve paste register
 -- vim.keymap.set('x', '<leader>p', '\"_dP')
 
